@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../constants/colors';
 
 export const Container = styled.div`
   width: 100%;
@@ -12,6 +11,13 @@ export const Container = styled.div`
   backdrop-filter: blur(10px);
   box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
   background-color: #fff;
-  border-bottom: 3px solid ${colors.secondary};
-  color: ${colors.tertiary};
  `
+
+export const Title = styled.h1`
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-family: Roboto;
+    font-size: 1rem;
+    color: #000;
+`

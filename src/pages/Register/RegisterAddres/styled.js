@@ -15,6 +15,7 @@ export const InputAddresContainer = styled.div`
   width: 95vw;
   justify-content: center;
   margin-bottom: 5vh;
+  margin-bottom: 30%;
 `;
 
 export const FormInput = styled.form`
@@ -31,7 +32,7 @@ export const TexteSpan = styled.div`
     justify-content: center;
     margin-top: 5%;
     span{
-        color: black;
+        color: #000000;
         font-size: larger;
     }
 `

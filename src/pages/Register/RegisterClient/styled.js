@@ -17,7 +17,7 @@ export const InputContainer = styled.div`
 `;
 
 export const FormInputClient = styled.form`
-    margin-bottom: 20%;
+    margin-bottom: 40%;
 `
 
 export const PositionLogo = styled.div`
