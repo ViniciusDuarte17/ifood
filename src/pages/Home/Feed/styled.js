@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const Filter = styled.div`
      width: 95%;
      height: 2.625rem;
@@ -23,5 +24,10 @@ export const Text = styled.span`
   letter-spacing: -0.39px;
   text-align: center;
   /* color: var(--lipstick); */
+`
+
+export const ContentCard = styled.div`
+     display: flex;
+     flex-direction: column;
 `
 

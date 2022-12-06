@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import { InputAdornment } from "@mui/material";
 import { Slied } from "../../../components/Slied";
 import { SwiperSlide } from "swiper/react";
+import { Card } from "../../../components/Card";
 
 
 export const FeedPage = () => {
@@ -39,6 +40,10 @@ export const FeedPage = () => {
           </SwiperSlide>
         </Slied>
       </Styled.Filter>
+      <Styled.ContentCard>
+        <Card />
+        <Card />
+      </Styled.ContentCard>
     </>
   )
 }
