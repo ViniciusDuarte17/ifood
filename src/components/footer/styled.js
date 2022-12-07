@@ -20,6 +20,8 @@ export const ContainerFooter = styled.div`
   bottom: 0;
   border-top: 2px solid #dfdfdf;
   width: 100%;
+  height: 3.063rem;
+  background-color: #fff;
 `;
 
 export const Button = styled.button`

@@ -2,11 +2,11 @@ import React from "react";
 import * as Styled from "./styled";
 
 
-export const Footer = () => {
+export const Footer = (props) => {
 
-    return(
+    return (
         <Styled.ContainerFooter>
-          ola
+            {props.children}
         </Styled.ContainerFooter>
     )
 }

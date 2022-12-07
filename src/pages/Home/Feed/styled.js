@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 
 
+export const ContainerFeed = styled.div`
+   /* border: 1px green solid ; */
+`
+
 export const Filter = styled.div`
      width: 95%;
      height: 2.625rem;
@@ -38,3 +42,10 @@ export const ContentTextField = styled.div`
      width: 90%;
 `
 
+export const ContentIcons = styled.div`
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 5%;
+`
