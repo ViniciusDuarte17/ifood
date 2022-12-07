@@ -8,7 +8,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { goToCart, goToProfile } from "../../../router/coordinator";
 
-export const CongFooter = () => {
+export const ConfFooter = () => {
     const navigate = useNavigate();
     return(
         <>
