@@ -31,3 +31,10 @@ export const ContentCard = styled.div`
      flex-direction: column;
 `
 
+export const ContentTextField = styled.div`
+     display: flex;
+     margin: auto;
+     justify-content: center;
+     width: 90%;
+`
+

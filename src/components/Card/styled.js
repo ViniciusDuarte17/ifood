@@ -9,6 +9,7 @@ export const Container = styled.div`
     border: solid 1px #b8b8b8;
     border-radius: 8px;
     margin-bottom: 5%;
+    padding-bottom: 5%;
 `
 
 export const Restaurant = styled.div`

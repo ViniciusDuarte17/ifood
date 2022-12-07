@@ -21,9 +21,10 @@ export const FeedPage = () => {
   return (
     <>
       <Headers texto={"Ifuture"} />
-      <TextField
+     <Styled.ContentTextField>
+     <TextField
+       fullWidth
         placeholder="Restaurante"
-        fullWidth
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -33,6 +34,7 @@ export const FeedPage = () => {
         }}
         variant="outlined"
       />
+     </Styled.ContentTextField>
       <Styled.Filter>
         <Slied settings={settings}>
           <SwiperSlide>
@@ -41,6 +43,9 @@ export const FeedPage = () => {
         </Slied>
       </Styled.Filter>
       <Styled.ContentCard>
+        <Card />
+        <Card />
+        <Card />
         <Card />
         <Card />
       </Styled.ContentCard>
