@@ -21,6 +21,7 @@ export const FeedPage = () => {
   }
 
   const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
 
   const updateQuery = (event) => {
     setQuery(event.target.value);
@@ -29,9 +30,19 @@ export const FeedPage = () => {
   const { restaurants } = useContext(GlobalStateContext);
 
   const getCategory = restaurants.map((restaurant) => {
+    const updateCategory = (category) => {
+      setCategory(category);
+    }
+
     return (
-      <SwiperSlide>
-        <Styled.Text> <Button color="secondary">{restaurant.category}</Button> </Styled.Text>
+      <SwiperSlide key={restaurant.id}>
+        <Styled.Text>
+          <Button
+            onClick={() => updateCategory(restaurant.category)}
+            color="secondary">
+            {restaurant.category}
+          </Button>
+        </Styled.Text>
       </SwiperSlide>
     );
   })
@@ -65,6 +76,7 @@ export const FeedPage = () => {
           restaurants.length > 0 ?
             restaurants
               .filter(restaurant => restaurant.name.toLowerCase().includes(query.toLowerCase()))
+              .filter(restaurant => restaurant.category.toLowerCase().includes(category.toLowerCase()))
               .map(restaurant => <Card key={restaurant.id} restaurant={restaurant} />)
             : <h1>Carregando</h1>
         }
