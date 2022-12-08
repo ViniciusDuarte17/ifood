@@ -2,6 +2,10 @@ export const goToFeed = (navigate) => {
     navigate("/")
 }
 
+export const goToRestaurantPage = (navigate) => {
+    navigate("/restaurante/:id")
+}
+
 export const goToCart = (navigate) => {
     navigate("/cart")
 }

@@ -1,11 +1,14 @@
 import { CardMedia } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { goToRestaurantPage } from '../../router/coordinator';
 import * as Styled from "./styled";
 
 export const Card = ( {restaurant}) => {
+    const navigate = useNavigate();
 
     return (
-        <Styled.Container onClick={()=> console.log(restaurant.id)}>
+        <Styled.Container onClick={()=> goToRestaurantPage(navigate, restaurant.id)}>
             <CardMedia
                 component="img"
                 height="194"
