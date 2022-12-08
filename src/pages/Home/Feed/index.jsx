@@ -11,14 +11,11 @@ import { Card } from "../../../components/Card";
 import { ConfFooter } from "./ConfFooter";
 import { GlobalStateContext } from "../../../Global/GlobalStateContext";
 import { useState } from "react";
+import { settings } from "../../../model";
 
 
 export const FeedPage = () => {
   useProtectedPage();
-  const settings = {
-    spaceBetween: 6,
-    slidesPerView: 3
-  }
 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
