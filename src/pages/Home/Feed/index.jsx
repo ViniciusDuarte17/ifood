@@ -22,6 +22,7 @@ export const FeedPage = () => {
 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
+  const [isValid, setIsvalid] = useState(false)
 
   const updateQuery = (event) => {
     setQuery(event.target.value);
@@ -31,7 +32,14 @@ export const FeedPage = () => {
 
   const getCategory = restaurants.map((restaurant) => {
     const updateCategory = (category) => {
-      setCategory(category);
+
+      if (!isValid) {
+        setIsvalid(true);
+        setCategory(category);
+      } else {
+        setIsvalid(false)
+        setCategory("");
+      }
     }
 
     return (
