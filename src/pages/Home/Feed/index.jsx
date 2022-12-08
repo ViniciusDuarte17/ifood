@@ -22,7 +22,7 @@ export const FeedPage = () => {
 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
-  const [isValid, setIsvalid] = useState(false)
+  const [isValid, setIsvalid] = useState(false);
 
   const updateQuery = (event) => {
     setQuery(event.target.value);
