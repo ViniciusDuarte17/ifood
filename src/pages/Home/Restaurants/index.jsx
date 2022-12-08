@@ -1,16 +1,26 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
-
+import { Headers } from "../../../components/Hearder";
+import * as Styled from "./styled";
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { goToBack } from "../../../router/coordinator";
 
 export const RestaurantPage = () => {
   useProtectedPage();
+  const navigate = useNavigate();
   const params = useParams()
-  console.log(params.id)
+  // console.log(params.id)
 
   return (
     <div >
-     detalhe do restaurante
+      <Headers texto={"Restaurante"}>
+        <Styled.ButtonIcon  onClick={() => goToBack(navigate)}>
+          <ChevronLeftIcon
+            fontSize="large"
+            color="secondary" />
+        </Styled.ButtonIcon>
+      </Headers>
     </div>
   )
 }
