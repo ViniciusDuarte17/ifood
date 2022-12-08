@@ -5,6 +5,7 @@ import {LoginPage} from "../pages/Login";
 import {RegisterCleint} from "../pages/Register/RegisterClient";
 import { RegisrerAddres } from "../pages/Register/RegisterAddres";
 import { ProfilePage } from "../pages/Profile";
+import { RestaurantPage } from "../pages/Home/Restaurants";
 
 export const AppRouter = () => {
 
@@ -12,6 +13,7 @@ export const AppRouter = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<FeedPage />} />
+                <Route path='restaurante/:id' element={ <RestaurantPage /> } />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/cadastro" element={<RegisterCleint />} />

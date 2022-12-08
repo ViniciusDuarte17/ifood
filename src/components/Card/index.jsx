@@ -5,7 +5,7 @@ import * as Styled from "./styled";
 export const Card = ( {restaurant}) => {
 
     return (
-        <Styled.Container>
+        <Styled.Container onClick={()=> console.log(restaurant.id)}>
             <CardMedia
                 component="img"
                 height="194"
