@@ -13,7 +13,7 @@ export const AppRouter = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<FeedPage />} />
-                <Route path='restaurante/:id' element={ <RestaurantPage /> } />
+                <Route path='/restaurante/:id' element={ <RestaurantPage /> } />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/cadastro" element={<RegisterCleint />} />
