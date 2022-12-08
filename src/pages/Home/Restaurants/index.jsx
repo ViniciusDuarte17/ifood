@@ -6,7 +6,7 @@ import { useProtectedPage } from "../../../hooks/useProtectedPage";
 export const RestaurantPage = () => {
   useProtectedPage();
   const params = useParams()
-  console.log(params)
+  console.log(params.id)
 
   return (
     <div >
