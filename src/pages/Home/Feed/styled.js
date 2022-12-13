@@ -16,7 +16,7 @@ export const Filter = styled.div`
 
 
 export const Text = styled.span`
-   width: 5.438rem;
+  width: 5.438rem;
   height: 1.125rem;
   margin: 0 0.5rem 0 0;
   font-family: Roboto;

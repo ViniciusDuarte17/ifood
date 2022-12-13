@@ -1,5 +1,5 @@
 import * as Styled from "./styled";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Headers } from "../../../components/Hearder";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
 import SearchIcon from '@mui/icons-material/Search';

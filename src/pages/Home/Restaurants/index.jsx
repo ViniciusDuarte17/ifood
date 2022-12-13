@@ -5,6 +5,8 @@ import { Headers } from "../../../components/Hearder";
 import * as Styled from "./styled";
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { goToBack } from "../../../router/coordinator";
+import { RestaurantMain } from "./RestaurantMain";
+
 
 
 export const RestaurantPage = () => {
@@ -16,14 +18,14 @@ export const RestaurantPage = () => {
   return (
     <div>
       <Headers texto={"Restaurante"}>
-        <Styled.ButtonIcon  onClick={() => goToBack(navigate)}>
+        <Styled.ButtonIcon onClick={() => goToBack(navigate)}>
           <ChevronLeftIcon
             fontSize="large"
             color="secondary" />
         </Styled.ButtonIcon>
       </Headers>
       <Styled.ContentMain>
-      
+        <RestaurantMain />
       </Styled.ContentMain>
     </div>
   )
