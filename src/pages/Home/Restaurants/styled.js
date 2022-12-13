@@ -53,3 +53,22 @@ export const SpanText = styled.span`
   line-height: normal;
   color: #b8b8b8;
 `
+
+export const Principais = styled.div`
+   border: solid 2px black;
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   margin-top: 5%;
+`
+
+export const PrincipaisCopy = styled.span`
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  margin-left: 1%;
+  color: #000000;
+`

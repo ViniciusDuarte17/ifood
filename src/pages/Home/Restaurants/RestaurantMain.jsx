@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CardMedia } from "@mui/material";
 import * as Styled from "./styled";
+import { GlobalStateContext } from "../../../Global/GlobalStateContext";
 
-export const RestaurantMain = (props) => {
-    // const {  } = props
+export const RestaurantMain = ({ id }) => {
+    const { restaurants } = useContext(GlobalStateContext);
+
+    const restaurant = restaurants
+        .filter(rest => rest.id === id)
+        .map(rest => rest)
 
     return (
         <>
@@ -11,19 +16,20 @@ export const RestaurantMain = (props) => {
                 <CardMedia
                     component="img"
                     height="194"
-                    image={"https://firebasestorage.googleapis.com/v0/b/missao-newton.appspot.com/o/futureFoodsRestaurants%2Fhabibs.jpg?alt=media&token=a30ea547-3a3b-4e80-b58e-b8dc976697de"}
+                    image={restaurant[0].logoUrl}
                     alt="Logo restaurante"
                 />
                 <Styled.Content>
                     <Styled.TextRed> Bullguer Vila Madalena </Styled.TextRed>
-                    <Styled.SpanText> Burger </Styled.SpanText>
+                    <Styled.SpanText> {restaurant[0].name} </Styled.SpanText>
                     <Styled.Description>
-                        <Styled.SpanText>  50 - 60 min </Styled.SpanText>
-                        <Styled.SpanText> Frete R$6,00 </Styled.SpanText>
+                        <Styled.SpanText> {restaurant[0].deliveryTime - 10} - {restaurant[0].deliveryTime} min </Styled.SpanText>
+                        <Styled.SpanText> Frete R${restaurant[0].shipping},00 </Styled.SpanText>
                     </Styled.Description>
-                    <div>
-                        <Styled.SpanText> R. Fradique Coutinho, 1136 - Vila Madalena </Styled.SpanText>
-                    </div>
+                    <Styled.SpanText> {restaurant[0].address} </Styled.SpanText>
+                    <Styled.Principais>
+                        <Styled.PrincipaisCopy>Principais</Styled.PrincipaisCopy>
+                    </Styled.Principais>
                 </Styled.Content>
             </Styled.RestaurantMain>
         </>

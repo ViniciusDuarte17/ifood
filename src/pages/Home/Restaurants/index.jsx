@@ -12,8 +12,7 @@ import { RestaurantMain } from "./RestaurantMain";
 export const RestaurantPage = () => {
   useProtectedPage();
   const navigate = useNavigate();
-  const params = useParams()
-  // console.log(params.id)
+  const params = useParams();
 
   return (
     <div>
@@ -25,7 +24,7 @@ export const RestaurantPage = () => {
         </Styled.ButtonIcon>
       </Headers>
       <Styled.ContentMain>
-        <RestaurantMain />
+        <RestaurantMain id={params.id} />
       </Styled.ContentMain>
     </div>
   )
