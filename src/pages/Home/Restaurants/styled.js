@@ -5,3 +5,8 @@ export const ButtonIcon = styled(Button)`
    position: fixed !important;
    right: 80%;
 `
+
+export const ContentMain = styled.main`
+
+
+`
