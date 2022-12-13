@@ -7,6 +7,5 @@ export const ButtonIcon = styled(Button)`
 `
 
 export const ContentMain = styled.main`
-
-
+   
 `

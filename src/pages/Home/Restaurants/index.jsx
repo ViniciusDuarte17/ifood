@@ -5,7 +5,7 @@ import { Headers } from "../../../components/Hearder";
 import * as Styled from "./styled";
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { goToBack } from "../../../router/coordinator";
-import { Card } from "../../../components/Card";
+
 
 export const RestaurantPage = () => {
   useProtectedPage();
@@ -14,7 +14,7 @@ export const RestaurantPage = () => {
   // console.log(params.id)
 
   return (
-    <div >
+    <div>
       <Headers texto={"Restaurante"}>
         <Styled.ButtonIcon  onClick={() => goToBack(navigate)}>
           <ChevronLeftIcon
@@ -23,7 +23,7 @@ export const RestaurantPage = () => {
         </Styled.ButtonIcon>
       </Headers>
       <Styled.ContentMain>
-       <Card />
+      
       </Styled.ContentMain>
     </div>
   )
