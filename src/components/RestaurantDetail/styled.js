@@ -69,3 +69,17 @@ export const Rectangle = styled.div`
   border-radius: 8px;
   border: solid 1px #000;
 `
+
+export const RectangleNumber = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 8px;
+  border: solid 1px #e8222e;
+  width: 20%;
+  margin-left: 80%;
+`
+
+export const TextStyle = styled.span`
+  margin: 2% 1%;
+  padding: 15% 20%;
+`
