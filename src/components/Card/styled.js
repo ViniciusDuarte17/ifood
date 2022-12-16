@@ -10,6 +10,7 @@ export const Container = styled.div`
     border-radius: 8px;
     margin-bottom: 5%;
     padding-bottom: 5%;
+    cursor: pointer;
 `
 
 export const Restaurant = styled.div`

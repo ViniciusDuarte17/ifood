@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
     width: 90%;
     margin: auto;
-    height: 7rem;
+    height: 18%;
     border-radius: 8px;
     border: solid 1px #b8b8b8;
     margin-top: 2%;
@@ -60,4 +60,15 @@ export const SpanPrice = styled.span`
   padding: 0 8%;
   color:black;
   margin-top: 3%;
+`
+
+export const Rectangle = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  bottom: 21%;
+  right: 5%;
+  width: 30%;
+  border-radius: 8px;
+  border: solid 1px #000000;
 `
