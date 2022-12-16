@@ -68,6 +68,7 @@ export const Rectangle = styled.div`
   margin-left: 50%;
   border-radius: 8px;
   border: solid 1px #000;
+  border: none;
 `
 
 export const RectangleNumber = styled.div`
