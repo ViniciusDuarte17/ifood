@@ -64,7 +64,7 @@ export const Principais = styled.div`
 
 export const PrincipaisCopy = styled.span`
   font-family: Roboto;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

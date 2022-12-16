@@ -6,7 +6,7 @@ import * as Styled from "./styled";
 
 export const Card = ( {restaurant}) => {
     const navigate = useNavigate();
-
+  
     return (
         <Styled.Container onClick={()=> goToRestaurantPage(navigate, restaurant.id)}>
             <CardMedia
