@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -63,12 +62,10 @@ export const SpanPrice = styled.span`
 `
 
 export const Rectangle = styled.div`
-  position: fixed;
   display: flex;
-  justify-content: end;
-  bottom: 21%;
-  right: 5%;
-  width: 30%;
+  flex-direction: row-reverse;
+  width: 50%;
+  margin-left: 50%;
   border-radius: 8px;
-  border: solid 1px #000000;
+  border: solid 1px #000;
 `

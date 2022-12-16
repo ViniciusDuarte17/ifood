@@ -1,4 +1,4 @@
-import { Button, CardMedia } from "@mui/material";
+import {Button, CardMedia } from "@mui/material";
 import React from "react";
 import * as Styled from "./styled";
 
