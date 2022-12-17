@@ -7,9 +7,8 @@ import * as Styled from "./styled";
 export const RestaurantDetail = ({ restaurant }) => {
   const { name, description, photoUrl, price } = restaurant;
 
-
   const [amout, setAmout] = useState(0)
-
+  console.log(amout)
   const handleChange = (e) => {
     setAmout(e.target.value)
   }
@@ -33,7 +32,7 @@ export const RestaurantDetail = ({ restaurant }) => {
           </Styled.RectangleNumber> : null}
           <Styled.SpanName>{name}</Styled.SpanName>
           <Styled.SpanDescription>{description}</Styled.SpanDescription>
-          <Styled.SpanPrice>R${price},00</Styled.SpanPrice>
+          <Styled.SpanPrice>R${price.toFixed(2).toString().replace('.', ',')}</Styled.SpanPrice>
           <Styled.Rectangle>
             {
               amout === 0 ? <SelectAmout amout={amout} handleChange={handleChange} />

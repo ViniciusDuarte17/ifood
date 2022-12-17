@@ -3,9 +3,8 @@ import React from "react";
 
 
 export const SelectAmout = ({ amout, handleChange }) => {
-    console.log(amout)
     let MenuItems = [];
-
+    
     for (let index = amout; index < 11; index++) {
         MenuItems.push(<MenuItem value={index}>{index}</MenuItem>)
     }
