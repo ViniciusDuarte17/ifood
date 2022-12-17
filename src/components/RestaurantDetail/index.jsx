@@ -19,7 +19,7 @@ export const RestaurantDetail = (props) => {
         <Styled.ContentImg>
           <CardMedia
             component="img"
-            height="125"
+            height="100%"
             image={"https://firebasestorage.googleapis.com/v0/b/missao-newton.appspot.com/o/futureFoodsRestaurants%2Fhabibs.jpg?alt=media&token=a30ea547-3a3b-4e80-b58e-b8dc976697de"}
             alt="Logo restaurante"
           />
@@ -34,10 +34,12 @@ export const RestaurantDetail = (props) => {
           <Styled.SpanDescription>Pão,carne.queijo,piclesemolho.</Styled.SpanDescription>
           <Styled.SpanPrice>R$23,00</Styled.SpanPrice>
           <Styled.Rectangle>
-          {
-           amout === 0 ? <SelectAmout amout={amout} handleChange={handleChange}/>
-           : <Button onClick={() => setAmout(amout - 1)}>Remover</Button>
-          }
+            {
+              amout === 0 ? <SelectAmout amout={amout} handleChange={handleChange} />
+                : <Styled.RectangleButton>
+                  <Button onClick={() => setAmout(amout - 1)}>Remover</Button>
+                </Styled.RectangleButton>
+            }
           </Styled.Rectangle>
         </Styled.RestaurentItem>
       </Styled.Content>

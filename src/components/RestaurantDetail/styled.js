@@ -51,7 +51,7 @@ export const SpanDescription = styled.span`
 
 export const SpanPrice = styled.span`
   font-family: Roboto;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -69,6 +69,14 @@ export const Rectangle = styled.div`
   border-radius: 8px;
   border: solid 1px #000;
   border: none;
+`
+export const RectangleButton = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  width: 70%;
+  margin-left: 50%;
+  border-radius: 8px;
+  border: solid 1px #e8222e;
 `
 
 export const RectangleNumber = styled.div`
