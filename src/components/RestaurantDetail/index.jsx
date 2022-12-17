@@ -35,7 +35,10 @@ export const RestaurantDetail = ({ restaurant }) => {
           <Styled.SpanPrice>R${price.toFixed(2).toString().replace('.', ',')}</Styled.SpanPrice>
           <Styled.Rectangle>
             {
-              amout === 0 ? <SelectAmout amout={amout} handleChange={handleChange} />
+              amout === 0 ? <SelectAmout
+                amout={amout}
+                handleChange={handleChange}
+              />
                 : <Styled.RectangleButton>
                   <Button onClick={() => setAmout(amout - 1)}>Remover</Button>
                 </Styled.RectangleButton>

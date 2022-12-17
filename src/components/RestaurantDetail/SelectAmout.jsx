@@ -6,7 +6,7 @@ export const SelectAmout = ({ amout, handleChange }) => {
     let MenuItems = [];
     
     for (let index = amout; index < 11; index++) {
-        MenuItems.push(<MenuItem value={index}>{index}</MenuItem>)
+        MenuItems.push(<MenuItem key={index} value={index}>{index}</MenuItem>)
     }
     return (
         <FormControl fullWidth>
