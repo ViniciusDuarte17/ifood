@@ -8,7 +8,7 @@ export const RestaurantDetail = ({ restaurant }) => {
   const { name, description, photoUrl, price } = restaurant;
 
   const [amout, setAmout] = useState(0)
-  console.log(amout)
+
   const handleChange = (e) => {
     setAmout(e.target.value)
   }
