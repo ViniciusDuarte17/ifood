@@ -21,7 +21,7 @@ export const RestaurantDetail = ({ restaurant }) => {
             component="img"
             height="100%"
             image={photoUrl}
-            alt="Logo restaurante"
+            alt= {"logo "+ name}
           />
         </Styled.ContentImg>
         <Styled.RestaurentItem>
