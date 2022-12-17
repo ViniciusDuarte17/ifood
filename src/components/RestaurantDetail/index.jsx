@@ -4,8 +4,9 @@ import { useState } from "react";
 import { SelectAmout } from "./SelectAmout";
 import * as Styled from "./styled";
 
-export const RestaurantDetail = (props) => {
-  const { } = props;
+export const RestaurantDetail = ({ restaurant }) => {
+  const { name, description, photoUrl, price } = restaurant;
+
 
   const [amout, setAmout] = useState(0)
 
@@ -20,7 +21,7 @@ export const RestaurantDetail = (props) => {
           <CardMedia
             component="img"
             height="100%"
-            image={"https://firebasestorage.googleapis.com/v0/b/missao-newton.appspot.com/o/futureFoodsRestaurants%2Fhabibs.jpg?alt=media&token=a30ea547-3a3b-4e80-b58e-b8dc976697de"}
+            image={photoUrl}
             alt="Logo restaurante"
           />
         </Styled.ContentImg>
@@ -30,9 +31,9 @@ export const RestaurantDetail = (props) => {
               {amout}
             </Styled.TextStyle>
           </Styled.RectangleNumber> : null}
-          <Styled.SpanName>Bullguer</Styled.SpanName>
-          <Styled.SpanDescription>Pão,carne.queijo,piclesemolho.</Styled.SpanDescription>
-          <Styled.SpanPrice>R$23,00</Styled.SpanPrice>
+          <Styled.SpanName>{name}</Styled.SpanName>
+          <Styled.SpanDescription>{description}</Styled.SpanDescription>
+          <Styled.SpanPrice>R${price},00</Styled.SpanPrice>
           <Styled.Rectangle>
             {
               amout === 0 ? <SelectAmout amout={amout} handleChange={handleChange} />

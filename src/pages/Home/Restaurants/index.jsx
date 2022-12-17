@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
 import { Headers } from "../../../components/Hearder";
@@ -7,11 +7,18 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { goToBack } from "../../../router/coordinator";
 import { RestaurantMain } from "./RestaurantMain";
 import { RestaurantDetail } from "../../../components/RestaurantDetail";
+import { getRestaurantDetail } from "../../../services/getRestaurantDetail";
 
 export const RestaurantPage = () => {
   useProtectedPage();
   const navigate = useNavigate();
   const params = useParams();
+  const [restaurantDetail, setRestaurantDetail] = useState([])
+
+  useEffect( () => {
+    getRestaurantDetail(params.id, setRestaurantDetail)
+  }, [])
+  
 
   return (
     <div>
@@ -24,7 +31,12 @@ export const RestaurantPage = () => {
       </Headers>
       <Styled.ContentMain>
         <RestaurantMain id={params.id} />
-        <RestaurantDetail />
+        {
+          restaurantDetail &&
+          restaurantDetail.map((restaurant) => {
+            return <RestaurantDetail key={restaurant.id} restaurant={restaurant}/>
+          })
+        }
       </Styled.ContentMain>
     </div>
   )
