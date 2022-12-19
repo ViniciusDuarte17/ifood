@@ -19,6 +19,10 @@ export const RestaurantPage = () => {
     getRestaurantDetail(params.id, setRestaurantDetail)
   }, [])
 
+  const addItemToCart = (newItem, amout) => {
+    console.log('carrinho', newItem, amout)
+  }
+
   return (
     <div>
       <Headers texto={"Restaurante"}>
@@ -33,7 +37,8 @@ export const RestaurantPage = () => {
         {
           restaurantDetail &&
           restaurantDetail.map((restaurant) => {
-            return <RestaurantDetail key={restaurant.id} restaurant={restaurant} />
+            return <RestaurantDetail key={restaurant.id} restaurant={restaurant} addItemToCart={addItemToCart}
+            />
           })
         }
       </Styled.ContentMain>

@@ -1,16 +1,16 @@
-import { Button, CardMedia } from "@mui/material";
+import { Button, ButtonBase, CardMedia } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 import { SelectAmout } from "./SelectAmout";
 import * as Styled from "./styled";
 
-export const RestaurantDetail = ({ restaurant }) => {
+export const RestaurantDetail = ({ restaurant, addItemToCart }) => {
   const { name, description, photoUrl, price } = restaurant;
 
   const [amout, setAmout] = useState(0)
 
   const handleChange = (e) => {
-    setAmout(e.target.value)
+    setAmout(e.target.value); 
   }
 
   return (
@@ -33,13 +33,15 @@ export const RestaurantDetail = ({ restaurant }) => {
           <Styled.SpanName>{name}</Styled.SpanName>
           <Styled.SpanDescription>{description}</Styled.SpanDescription>
           <Styled.SpanPrice>R${price.toFixed(2).toString().replace('.', ',')}</Styled.SpanPrice>
-          <Styled.Rectangle>
+          <Styled.Rectangle >
             {
               amout === 0 ? <SelectAmout
                 amout={amout}
                 handleChange={handleChange}
-              />
-                : <Styled.RectangleButton>
+                restaurant={restaurant}
+                addItemToCart={addItemToCart}
+              /> 
+                : <Styled.RectangleButton >
                   <Button onClick={() => setAmout(amout - 1)}>Remover</Button>
                 </Styled.RectangleButton>
             }

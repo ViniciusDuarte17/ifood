@@ -2,12 +2,13 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
 
 
-export const SelectAmout = ({ amout, handleChange }) => {
+export const SelectAmout = ({ amout, handleChange, restaurant, addItemToCart }) => {
     let MenuItems = [];
     
     for (let index = amout; index < 11; index++) {
-        MenuItems.push(<MenuItem key={index} value={index}>{index}</MenuItem>)
+        MenuItems.push(<MenuItem key={index} value={index}  onClick={ () => addItemToCart(restaurant, index )}>{index}</MenuItem>)
     }
+
     return (
         <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Adicionar</InputLabel>
