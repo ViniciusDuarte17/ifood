@@ -19,7 +19,6 @@ export const RestaurantPage = () => {
     getRestaurantDetail(params.id, setRestaurantDetail)
   }, [])
   
-
   return (
     <div>
       <Headers texto={"Restaurante"}>
