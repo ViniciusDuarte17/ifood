@@ -7,6 +7,7 @@ import { headers } from "../components/token"
 
 export const GlobalState = (props) => {
   const [restaurants, setRestaurants] = useState([])
+  const [cart, setCart] = useState([])
 
   const getRestaurant = () => {
     axios
@@ -22,7 +23,9 @@ export const GlobalState = (props) => {
   }, [])
 
 const data = {
-   restaurants
+   restaurants,
+   cart,
+   setCart
 }
 
     return (

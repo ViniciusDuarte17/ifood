@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
 import { Headers } from "../../../components/Hearder";
@@ -8,19 +8,23 @@ import { goToBack } from "../../../router/coordinator";
 import { RestaurantMain } from "./RestaurantMain";
 import { RestaurantDetail } from "../../../components/RestaurantDetail";
 import { getRestaurantDetail } from "../../../services/getRestaurantDetail";
+import { GlobalStateContext } from "../../../Global/GlobalStateContext";
 
 export const RestaurantPage = () => {
   useProtectedPage();
   const navigate = useNavigate();
   const params = useParams();
   const [restaurantDetail, setRestaurantDetail] = useState([])
+  const { cart, setCart } = useContext(GlobalStateContext);
 
   useEffect(() => {
     getRestaurantDetail(params.id, setRestaurantDetail)
   }, [])
 
   const addItemToCart = (newItem, amout) => {
-    console.log('carrinho', newItem, amout)
+    const item = { ...newItem, amout }
+    const newCart = [...cart, item]
+    setCart(newCart)
   }
 
   return (
@@ -45,3 +49,4 @@ export const RestaurantPage = () => {
     </div>
   )
 }
+ 
