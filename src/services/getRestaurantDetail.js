@@ -9,7 +9,7 @@ export const getRestaurantDetail = (id, setRestaurantDetail) => {
     axios
     .get(`${BASE_URL}/restaurants/${id}`, headers)
     .then( (res) => {
-        setRestaurantDetail(res.data.restaurant.products)
+        setRestaurantDetail(res.data.restaurant)
     }).catch( (err) => {
         console.log(err, "caiu no catch")
     })

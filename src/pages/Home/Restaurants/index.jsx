@@ -37,10 +37,10 @@ export const RestaurantPage = () => {
         </Styled.ButtonIcon>
       </Headers>
       <Styled.ContentMain>
-        <RestaurantMain id={params.id} />
+        <RestaurantMain restaurantDetail={restaurantDetail} />
         {
-          restaurantDetail &&
-          restaurantDetail.map((restaurant) => {
+          restaurantDetail.products &&
+          restaurantDetail.products.map((restaurant) => {
             return <RestaurantDetail key={restaurant.id} restaurant={restaurant} addItemToCart={addItemToCart}
             />
           })
@@ -49,4 +49,3 @@ export const RestaurantPage = () => {
     </div>
   )
 }
- 

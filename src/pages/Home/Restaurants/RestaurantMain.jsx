@@ -1,14 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { CardMedia } from "@mui/material";
 import * as Styled from "./styled";
-import { GlobalStateContext } from "../../../Global/GlobalStateContext";
 
-export const RestaurantMain = ({ id }) => {
-    const { restaurants } = useContext(GlobalStateContext);
 
-    const restaurant = restaurants
-        .filter(rest => rest.id === id)
-        .map(rest => rest)
+export const RestaurantMain = ({ restaurantDetail }) => {
+    const { name, logoUrl, shipping, deliveryTime, address } = restaurantDetail && restaurantDetail;
 
     return (
         <>
@@ -16,17 +12,17 @@ export const RestaurantMain = ({ id }) => {
                 <CardMedia
                     component="img"
                     height="194"
-                    image={restaurant[0].logoUrl}
+                    image={logoUrl}
                     alt="Logo restaurante"
                 />
                 <Styled.Content>
                     <Styled.TextRed> Bullguer Vila Madalena </Styled.TextRed>
-                    <Styled.SpanText> {restaurant[0].name} </Styled.SpanText>
+                    <Styled.SpanText> {name} </Styled.SpanText>
                     <Styled.Description>
-                        <Styled.SpanText> {restaurant[0].deliveryTime - 10} - {restaurant[0].deliveryTime} min </Styled.SpanText>
-                        <Styled.SpanText> Frete R${restaurant[0].shipping},00 </Styled.SpanText>
+                        <Styled.SpanText> {deliveryTime - 10} - {deliveryTime} min </Styled.SpanText>
+                        <Styled.SpanText> Frete R${shipping},00 </Styled.SpanText>
                     </Styled.Description>
-                    <Styled.SpanText> {restaurant[0].address} </Styled.SpanText>
+                    <Styled.SpanText> {address} </Styled.SpanText>
                     <Styled.Principais>
                         <Styled.PrincipaisCopy>Principais</Styled.PrincipaisCopy>
                     </Styled.Principais>
