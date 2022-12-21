@@ -8,7 +8,7 @@ export const FormPayment = ({ cart }) => {
     const handleChange = (event) => {
         setFormPaymentValue(event.target.value);
     };
-    console.log('===>', cart)
+    // console.log('===>', cart)
 
     return (
         <S.ContainerPayment>

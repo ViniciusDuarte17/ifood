@@ -1,11 +1,10 @@
 import { Button, CardMedia } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import * as Styled from "./styled";
 
-export const MyCard = ({ cart }) => {
-    const { name, description, photoUrl, price, amout } = cart;
+export const MyCard = ({ carts, removeCart }) => {
+    const { name, description, photoUrl, price, amout } = carts;
 
- 
     return (
         <Styled.Container>
             <Styled.Content>
@@ -18,17 +17,17 @@ export const MyCard = ({ cart }) => {
                     />
                 </Styled.ContentImg>
                 <Styled.RestaurentItem>
-                     <Styled.RectangleNumber>
+                    <Styled.RectangleNumber>
                         <Styled.TextStyle>
                             {amout}
                         </Styled.TextStyle>
-                    </Styled.RectangleNumber> 
+                    </Styled.RectangleNumber>
                     <Styled.SpanName>{name}</Styled.SpanName>
                     <Styled.SpanDescription>{description}</Styled.SpanDescription>
                     <Styled.SpanPrice>R${price.toFixed(2).toString().replace('.', ',')}</Styled.SpanPrice>
                     <Styled.Rectangle >
                         <Styled.RectangleButton >
-                            <Button >Remover</Button>
+                            <Button onClick={() => removeCart(carts)}>Remover</Button>
                         </Styled.RectangleButton>
                     </Styled.Rectangle>
                 </Styled.RestaurentItem>

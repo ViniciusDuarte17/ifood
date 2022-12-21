@@ -8,11 +8,22 @@ import { MyCard } from "./Card";
 import { FormPayment } from "./FormPayment";
 import { FooterCart } from "./FooterCart";
 
-
 export const CartPage = () => {
   useProtectedPage();
-  const { cart, address } = useContext(GlobalStateContext);
+  const { cart, address, setCart } = useContext(GlobalStateContext);
   const { number, street } = address && address
+
+  const removeCart = (removeItem) => {
+    const index = cart.findIndex((i) => i.id === removeItem.id)
+    const newCart = [...cart]
+
+    if (newCart[index].amout === 1) {
+      newCart.splice(index, 1)
+    } else {
+      newCart[index].amout -= 1
+    }
+    setCart(newCart)
+  }
 
   return (
     <>
@@ -26,7 +37,7 @@ export const CartPage = () => {
         </Styled.InforAddres> : <h3>carrinho vazio</h3>}
         <div>
           {cart && cart.map((item) => {
-            return <MyCard key={item.id} cart={item} />
+            return <MyCard key={item.id} carts={item} removeCart={removeCart} />
           })}
         </div>
         <FormPayment cart={cart} />
