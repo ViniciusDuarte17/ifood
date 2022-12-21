@@ -1,5 +1,5 @@
 import { Button, CardMedia } from '@mui/material';
-import React, { useContext } from 'react';
+import React from 'react';
 import * as Styled from "./styled";
 
 export const MyCard = ({ carts, removeCart }) => {

@@ -1,4 +1,4 @@
-import { Button, FormControlLabel, Radio, RadioGroup } from "@mui/material";
+import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React, { useState } from "react";
 import * as S from "./styled";
 
@@ -8,15 +8,21 @@ export const FormPayment = ({ cart }) => {
     const handleChange = (event) => {
         setFormPaymentValue(event.target.value);
     };
-    // console.log('===>', cart)
+    let subTotal = cart[0]?.shipping;
+
+    cart.forEach((product) => {
+        subTotal += Number(product.price * product.amout)
+    })
+    const subTotalForm = subTotal?.toFixed(2).toString().replace('.', ',');
+    const shippingForm = cart[0]?.shipping.toFixed(2).toString().replace('.', ',');
 
     return (
         <S.ContainerPayment>
             <S.Payment>
-                <S.SpanTextFrete>Frete R$0,00</S.SpanTextFrete>
+                <S.SpanTextFrete>Frete {cart.length > 0 ? `R$ ${shippingForm}` : `R$ 0,00`}</S.SpanTextFrete>
                 <S.SubTotal>
                     <S.SpanTextTotal>SUBTOTAL</S.SpanTextTotal>
-                    <S.SpanTextPrice>R$0,00</S.SpanTextPrice>
+                    <S.SpanTextPrice>{cart.length > 0 ? `R$ ${subTotalForm}` : `R$0,00`}</S.SpanTextPrice>
                 </S.SubTotal>
                 <S.SpanTextPayment>Forma de pagamento</S.SpanTextPayment>
             </S.Payment>
