@@ -7,6 +7,7 @@ import { headers } from "../components/token"
 
 export const GlobalState = (props) => {
   const [restaurants, setRestaurants] = useState([])
+  const [address, setAddres] = useState({})
   const [cart, setCart] = useState([])
 
   const getRestaurant = () => {
@@ -18,6 +19,20 @@ export const GlobalState = (props) => {
     .catch(err => console.log(err))
   }
 
+   const getAddress = () => {
+    axios
+    .get(`${BASE_URL}/profile/address`, headers)
+    .then( (res) => {
+      setAddres(res.data.address)
+    })
+    .catch( (error) => {
+      console.log(error)
+    })
+  }
+  useEffect( () => {
+    getAddress()
+  }, [])
+
   useEffect( () => {
     getRestaurant()
   }, [])
@@ -25,7 +40,9 @@ export const GlobalState = (props) => {
 const data = {
    restaurants,
    cart,
-   setCart
+   setCart,
+   address,
+   setAddres
 }
 
     return (

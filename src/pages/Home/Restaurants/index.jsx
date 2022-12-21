@@ -21,8 +21,10 @@ export const RestaurantPage = () => {
     getRestaurantDetail(params.id, setRestaurantDetail)
   }, [])
 
+  const { shipping, deliveryTime, address } = restaurantDetail && restaurantDetail;
+
   const addItemToCart = (newItem, amout) => {
-    const item = { ...newItem, amout }
+    const item = { ...newItem, amout, deliveryTime, shipping, address }
     const newCart = [...cart, item]
     setCart(newCart)
   }
