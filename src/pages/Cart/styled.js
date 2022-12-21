@@ -73,3 +73,11 @@ export const InforAddres = styled.div`
     color: #b8b8b8;
    }
 `
+
+export const ContentIcons = styled.div`
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 5%;
+`
