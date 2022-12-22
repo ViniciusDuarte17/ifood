@@ -1,5 +1,6 @@
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React, { useState } from "react";
+import { ButtonPayment } from "./ButtonPayment";
 import * as S from "./styled";
 
 export const FormPayment = ({ cart }) => {
@@ -35,20 +36,16 @@ export const FormPayment = ({ cart }) => {
                     <FormControlLabel value="Cartão de crédito" control={<Radio />} label="Cartão de crédito" />
                 </RadioGroup>
                 <S.ConfirmPayment>
-                    {cart.length === 0 ? <S.PaymentButton
+                    {cart.length === 0 ? <ButtonPayment
                         variant="contained"
-                        disabled
                         background={'rgba(232, 34, 46, 0.5)'}
                         color={'#000'}
-                    >
-                        Confirmar
-                    </S.PaymentButton> : <S.PaymentButton
-                        variant="contained"
-                        background={'#e8222e'}
-                        color={'#000'}
-                    >
-                        Confirmar
-                    </S.PaymentButton>}
+                    /> :
+                        <ButtonPayment
+                            variant="contained"
+                            background={'#e8222e'}
+                            color={'#000'}
+                        />}
                 </S.ConfirmPayment>
             </S.FormPaymentToValue>
         </S.ContainerPayment>
