@@ -10,13 +10,13 @@ import { FooterCart } from "./FooterCart";
 
 export const CartPage = () => {
   useProtectedPage();
-  const { cart, address, setCart } = useContext(GlobalStateContext);
-  const { number, street } = address && address
-  // console.log(cart)
+  const { cart, restaurantAddress, setCart } = useContext(GlobalStateContext);
+  const { number, street } = restaurantAddress && restaurantAddress
+
   const removeCart = (removeItem) => {
     const index = cart.findIndex((i) => i.id === removeItem.id)
     const newCart = [...cart]
-
+    
     if (newCart[index].amout === 1) {
       newCart.splice(index, 1)
     } else {

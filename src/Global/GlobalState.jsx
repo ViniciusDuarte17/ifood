@@ -7,7 +7,7 @@ import { headers } from "../components/token"
 
 export const GlobalState = (props) => {
   const [restaurants, setRestaurants] = useState([])
-  const [address, setAddres] = useState({})
+  const [restaurantAddress, setRestaurantAddres] = useState({})
   const [cart, setCart] = useState([])
 
   const getRestaurant = () => {
@@ -23,7 +23,7 @@ export const GlobalState = (props) => {
     axios
     .get(`${BASE_URL}/profile/address`, headers)
     .then( (res) => {
-      setAddres(res.data.address)
+      setRestaurantAddres(res.data.address)
     })
     .catch( (error) => {
       console.log(error)
@@ -41,10 +41,9 @@ const data = {
    restaurants,
    cart,
    setCart,
-   address,
-   setAddres
+   restaurantAddress,
+   setRestaurantAddres
 }
-
     return (
         <GlobalStateContext.Provider value={data} >
         {props.children}
