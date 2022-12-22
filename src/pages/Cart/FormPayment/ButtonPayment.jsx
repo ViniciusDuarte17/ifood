@@ -14,18 +14,3 @@ export const ButtonPayment = (props) => {
         </S.PaymentButton> 
     )
 }
-
-// {cart.length === 0 ? <S.PaymentButton
-//     variant="contained"
-//     disabled
-//     background={'rgba(232, 34, 46, 0.5)'}
-//     color={'#000'}
-// >
-//     Confirmar
-// </S.PaymentButton> : <S.PaymentButton
-//     variant="contained"
-//     background={'#e8222e'}
-//     color={'#000'}
-// >
-//     Confirmar
-// </S.PaymentButton>}
