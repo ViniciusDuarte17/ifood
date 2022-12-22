@@ -1,11 +1,12 @@
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React, { useState } from "react";
+import { registerPayment } from "../../../services/registerPayment";
 import { ButtonPayment } from "./ButtonPayment";
 import * as S from "./styled";
 
 export const FormPayment = ({ cart }) => {
     const [formPaymentValue, setFormPaymentValue] = useState('');
-
+    
     const handleChange = (event) => {
         setFormPaymentValue(event.target.value);
     };
@@ -16,6 +17,18 @@ export const FormPayment = ({ cart }) => {
     })
     const subTotalForm = subTotal?.toFixed(2).toString().replace('.', ',');
     const shippingForm = cart[0]?.shipping.toFixed(2).toString().replace('.', ',');
+
+    const paymentInformation = () => { 
+        const body = {
+            products:[ ],
+            paymentMethod:formPaymentValue
+        }
+        cart.forEach( (prod) => {
+            body.products.push( {id: prod.id, quantity: prod.amout} )
+        })
+        console.log(body)
+        registerPayment(cart[0]?.restaurantId,body)
+    }
 
     return (
         <S.ContainerPayment>
@@ -32,8 +45,8 @@ export const FormPayment = ({ cart }) => {
                     value={formPaymentValue}
                     onChange={handleChange}
                 >
-                    <FormControlLabel value="Dinheiro" control={<Radio />} label="Dinheiro" />
-                    <FormControlLabel value="Cartão de crédito" control={<Radio />} label="Cartão de crédito" />
+                    <FormControlLabel value="money" control={<Radio />} label="Dinheiro" />
+                    <FormControlLabel value="creditcard" control={<Radio />} label="Cartão de crédito" />
                 </RadioGroup>
                 <S.ConfirmPayment>
                     {cart.length === 0 ? <ButtonPayment
@@ -45,6 +58,7 @@ export const FormPayment = ({ cart }) => {
                             variant="contained"
                             background={'#e8222e'}
                             color={'#000'}
+                            paymentInformation={paymentInformation}
                         />}
                 </S.ConfirmPayment>
             </S.FormPaymentToValue>

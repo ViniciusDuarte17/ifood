@@ -8,6 +8,7 @@ export const ButtonPayment = (props) => {
             variant= {props.variant}
             background={props.background}
             color={props.color}
+            onClick={ props.paymentInformation}
         >
             Confirmar
         </S.PaymentButton> 

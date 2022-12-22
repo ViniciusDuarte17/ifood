@@ -12,7 +12,7 @@ export const CartPage = () => {
   useProtectedPage();
   const { cart, address, setCart } = useContext(GlobalStateContext);
   const { number, street } = address && address
-
+  // console.log(cart)
   const removeCart = (removeItem) => {
     const index = cart.findIndex((i) => i.id === removeItem.id)
     const newCart = [...cart]
