@@ -12,6 +12,7 @@ import { ConfFooter } from "./ConfFooter";
 import { GlobalStateContext } from "../../../Global/GlobalStateContext";
 import { useState } from "react";
 import { settings } from "../../../model";
+import { OrdersActive } from "./components/OrdersActive";
 
 
 export const FeedPage = () => {
@@ -85,6 +86,7 @@ export const FeedPage = () => {
               .map(restaurant => <Card key={restaurant.id} restaurant={restaurant} />)
             : <h1>Carregando</h1>
         }
+        <OrdersActive />
       </Styled.ContentCard>
       <ConfFooter />
     </Styled.ContainerFeed>
