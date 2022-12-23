@@ -10,6 +10,12 @@ export const ContainerOrders = styled.div`
     background-color: #e8222e;
 `
 
+export const ContentMain = styled.main`
+    width: 27rem;
+    margin:auto;
+    /* border: solid 1px green; */
+`
+
 export const ImgClock = styled.img`
     width: 2rem;
     height: 2rem;
@@ -33,11 +39,12 @@ span{
     }
 `
 
-export const ContentMain = styled.main`
+export const Content = styled.div`
     display: flex;
     width: 62%;
     justify-content: space-between;
     align-items: center;
+    /* border: solid 1px green; */
 `
 
 export const ClockDiv = styled.div`

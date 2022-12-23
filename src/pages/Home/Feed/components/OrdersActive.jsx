@@ -6,18 +6,20 @@ export const OrdersActive = () => {
 
     return (
         <S.ContainerOrders>
-            <S.Orders>
+           <S.ContentMain>
+           <S.Orders>
                 <span>Pedido em andamento</span>
             </S.Orders>
-            <S.ContentMain>
+            <S.Content>
                 <S.ClockDiv>
                     <S.ImgClock src={LogoClock} alt="logo de tempo" />
                 </S.ClockDiv>
                 <S.AdreesRestaurant>
                     <span>Bullguer Vila Madalena</span>
                 </S.AdreesRestaurant>
-            </S.ContentMain>
+            </S.Content>
             <S.SubSpan><span>SUBTOTAL R$67,00</span></S.SubSpan>
+           </S.ContentMain>
         </S.ContainerOrders>
     )
 } 
