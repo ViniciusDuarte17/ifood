@@ -1,12 +1,14 @@
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { registerPayment } from "../../../services/registerPayment";
 import { ButtonPayment } from "./ButtonPayment";
 import * as S from "./styled";
 
 export const FormPayment = ({ cart }) => {
     const [formPaymentValue, setFormPaymentValue] = useState('');
-    
+    const navigate = useNavigate();
+
     const handleChange = (event) => {
         setFormPaymentValue(event.target.value);
     };
@@ -26,8 +28,7 @@ export const FormPayment = ({ cart }) => {
         cart.forEach( (prod) => {
             body.products.push( {id: prod.id, quantity: prod.amout} )
         })
-        console.log(body)
-        registerPayment(cart[0]?.restaurantId,body)
+        registerPayment(cart[0]?.restaurantId,body, navigate)
     }
 
     return (

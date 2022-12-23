@@ -9,6 +9,7 @@ export const GlobalState = (props) => {
   const [restaurants, setRestaurants] = useState([])
   const [restaurantAddress, setRestaurantAddres] = useState({})
   const [cart, setCart] = useState([])
+  const [isOrder, setIsOrder] = useState(null)
 
   const getRestaurant = () => {
     axios
@@ -29,6 +30,15 @@ export const GlobalState = (props) => {
       console.log(error)
     })
   }
+  const getOrdersActive = () => {
+    axios
+    .get(`${BASE_URL}/active-order`, headers)
+    .then((res) => {
+      setIsOrder(res.data.order)
+    })
+    .catch(err => console.log(err))
+  }
+
   useEffect( () => {
     getAddress()
   }, [])
@@ -36,13 +46,18 @@ export const GlobalState = (props) => {
   useEffect( () => {
     getRestaurant()
   }, [])
+  useEffect( () => {
+    getOrdersActive()
+  }, [])
 
 const data = {
    restaurants,
    cart,
    setCart,
    restaurantAddress,
-   setRestaurantAddres
+   setRestaurantAddres,
+   isOrder,
+   setRestaurants
 }
     return (
         <GlobalStateContext.Provider value={data} >
@@ -50,5 +65,3 @@ const data = {
       </GlobalStateContext.Provider>
     )
 }
-
-

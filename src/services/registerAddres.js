@@ -13,6 +13,7 @@ export const registerAddres = (body, clean, navigate) => {
             alert("Enderenço criado!")
             clean()
             goToFeed(navigate)
+            window.location.reload(false)
         })
         .catch((err) => {
             console.log(err)

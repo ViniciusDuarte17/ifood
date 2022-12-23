@@ -12,6 +12,7 @@ export const registerLogin = (body, navigate) => {
             localStorage.setItem("token", res.data.token);
 
             hasAddress ? goToFeed(navigate) : goToRegisterEnddres(navigate)
+            window.location.reload(false)
         })
         .catch((err) => {
             console.log(err.response.data.message);

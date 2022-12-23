@@ -51,7 +51,7 @@ export const ClockDiv = styled.div`
     margin-left: 10%;
 `
 
-export const AdreesRestaurant = styled.div`
+export const RestaurantName = styled.div`
     span{
     font-family: Montserrat;
     font-size: 1.25rem;
@@ -61,6 +61,7 @@ export const AdreesRestaurant = styled.div`
     line-height: normal;
     letter-spacing: -0.39px;
     color: #000;
+    margin-left: -11.5rem;
     }
 `
 

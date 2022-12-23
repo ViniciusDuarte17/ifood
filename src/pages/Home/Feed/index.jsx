@@ -26,8 +26,8 @@ export const FeedPage = () => {
     setQuery(event.target.value);
   };
 
-  const { restaurants } = useContext(GlobalStateContext);
-
+  const { restaurants, isOrder } = useContext(GlobalStateContext);
+  
   const getCategory = restaurants.map((restaurant) => {
     const updateCategory = (category) => {
 
@@ -86,7 +86,7 @@ export const FeedPage = () => {
               .map(restaurant => <Card key={restaurant.id} restaurant={restaurant} />)
             : <h1>Carregando</h1>
         }
-        <OrdersActive />
+        { isOrder !== null? <OrdersActive isOrder={isOrder} /> : null}
       </Styled.ContentCard>
       <ConfFooter />
     </Styled.ContainerFeed>
