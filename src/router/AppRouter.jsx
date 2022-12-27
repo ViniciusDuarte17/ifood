@@ -6,6 +6,7 @@ import {RegisterCleint} from "../pages/Register/RegisterClient";
 import { RegisrerAddres } from "../pages/Register/RegisterAddres";
 import { ProfilePage } from "../pages/Profile";
 import { RestaurantPage } from "../pages/Home/Restaurants";
+import { ProfileEdit } from "../pages/InputProfile";
 
 export const AppRouter = () => {
 
@@ -19,6 +20,7 @@ export const AppRouter = () => {
                 <Route path="/cadastro" element={<RegisterCleint />} />
                 <Route path="/registro/enderenco" element={<RegisrerAddres />} />
                 <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/profile/editar" element={<ProfileEdit />} />
             </Routes>
         </BrowserRouter>
     )

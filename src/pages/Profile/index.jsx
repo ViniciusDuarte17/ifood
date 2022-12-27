@@ -3,7 +3,7 @@ import { Headers } from "../../components/Hearder";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import * as S from "./styled";
 import EditIcon from "@mui/icons-material/Edit";
-import { goToRegisterEnddres } from "../../router/coordinator";
+import { goToEditProfile, goToRegisterEnddres } from "../../router/coordinator";
 import { useNavigate } from "react-router-dom";
 import { useRequestData } from "../../hooks/useRequestData";
 import {BASE_URL} from "../../constants/BASE_URL";
@@ -26,7 +26,7 @@ export const ProfilePage = () => {
           <p> {profile?.user.email}</p>
           <p> {profile?.user.cpf}</p>
         </span>
-        <S.ButtonUi onClick={() => console.log("navigate")}>
+        <S.ButtonUi onClick={() => goToEditProfile(navigate)}>
           <EditIcon />
         </S.ButtonUi>
       </S.PerfilSpan>

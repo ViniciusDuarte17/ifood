@@ -25,6 +25,10 @@ export const goToRegisterEnddres = (navigate) => {
     navigate("/registro/enderenco")
 }
 
+export const goToEditProfile = (navigate) => {
+    navigate('/profile/editar')
+}
+
 export const goToBack = (navigate) => {
     navigate(-1)
 }
