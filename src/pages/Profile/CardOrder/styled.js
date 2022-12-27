@@ -17,6 +17,8 @@ margin-bottom: 35px;
 border-radius: 8px;
 
 h4{
+    font-family: Roboto;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     color: #e8222e;
@@ -33,6 +35,8 @@ p{
     margin-left: 4%;
 } 
  span{
+    font-family: Roboto;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     font-size: 1rem;

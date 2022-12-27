@@ -7,6 +7,8 @@ export const PerfilSpan = styled.span`
     align-items: center;
     padding: 2.5%;
     p {
+    font-family: Roboto;
+    font-size: 1rem;
     padding: 0.3rem;
     }
 `;
