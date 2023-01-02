@@ -1,4 +1,4 @@
-import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
+import { Button, CircularProgress, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { LogoFood } from "../../components/LogoFood";
 import * as Styled from "./styled";
@@ -11,11 +11,12 @@ export const LoginForm = () => {
     const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false); 
     const { form, onChange } = useForm({email: '', password: ''})
-
+    const [isLoading, setIsLoading] = useState(false)
 
     const onSubmitForm = (event) => {
+        setIsLoading(true)
         event.preventDefault();
-        registerLogin(form, navigate)
+        registerLogin(form, navigate, setIsLoading)
       };
 
   return (
@@ -76,7 +77,7 @@ export const LoginForm = () => {
          margin={"normal"}
          type={"submit"}
         >
-           <span>Entrar</span>
+           {isLoading ?<CircularProgress color={"success"} size={28} /> : <span>Entrar</span>}
         </Button>
 
         </Styled.FormInputLogin>
