@@ -13,6 +13,7 @@ import { GlobalStateContext } from "../../../Global/GlobalStateContext";
 import { useState } from "react";
 import { settings } from "../../../model";
 import { OrdersActive } from "./components/OrdersActive";
+import { Loading } from "../../../components/Loading";
 
 
 export const FeedPage = () => {
@@ -84,7 +85,7 @@ export const FeedPage = () => {
               .filter(restaurant => restaurant.name.toLowerCase().includes(query.toLowerCase()))
               .filter(restaurant => restaurant.category.toLowerCase().includes(category.toLowerCase()))
               .map(restaurant => <Card key={restaurant.id} restaurant={restaurant} />)
-            : <h1>Carregando</h1>
+            : <Loading size={50}/>
         }
         { isOrder !== null? <OrdersActive isOrder={isOrder} /> : null}
       </Styled.ContentCard>
