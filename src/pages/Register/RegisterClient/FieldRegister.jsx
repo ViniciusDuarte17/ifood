@@ -132,7 +132,7 @@ export const FieldRegister = () => {
             margin={"normal"}
             type={"submit"}
           >
-            Cadastrar
+            Criar
           </Button>
 
         </Styled.FormInputClient>

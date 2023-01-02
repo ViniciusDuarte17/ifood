@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "@mui/material";
 
 
 export const ContainerFieldRegister = styled.div`
@@ -36,4 +37,9 @@ export const TexteStyled = styled.div`
         font-size: larger;
     }
     
+`
+
+export const ButtonIcon = styled(Button)`
+   position: fixed !important;
+   right: 80%;
 `
