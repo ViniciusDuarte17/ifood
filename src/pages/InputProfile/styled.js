@@ -16,4 +16,8 @@ right: 80%;
 
 export const FormControl = styled.form`
     width: 80%;
+    span{
+        color: black;
+        font-size: larger;
+    }
 `

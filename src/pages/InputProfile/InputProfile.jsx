@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { editProfile } from "../../services/editProfile";
 import { useForm } from "../../hooks/useForm";
 import * as S from "./styled";
-import { Button, TextField } from "@mui/material";
+import { Button, CircularProgress, TextField } from "@mui/material";
 import { MaskCpf } from "../../components/MaskCpf";
 
 export const InputProfile = () => {
     const navigate = useNavigate();
     const { form, onChange, clean } = useForm({ name: "", email: "", cpf: "" });
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmitForm = (event) => {
+        setIsLoading(true)
         event.preventDefault();
-        editProfile(form, clean, navigate);
+        editProfile(form, clean, navigate, setIsLoading);
     };
     return (
         <>
@@ -52,7 +54,7 @@ export const InputProfile = () => {
                     type={"submit"}
                     required
                 >
-                    Salvar
+                    {isLoading ? <CircularProgress color={"success"} size={28} /> : <span>Salvar</span>}
                 </Button>
             </S.FormControl>
         </>
