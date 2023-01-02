@@ -1,3 +1,4 @@
+import { CircularProgress } from "@mui/material";
 import React from "react";
 import * as S from "./styled";
 
@@ -10,7 +11,7 @@ export const ButtonPayment = (props) => {
             color={props.color}
             onClick={ props.paymentInformation}
         >
-            Confirmar
+            {props.loading ? <CircularProgress color={"success"} size={28} /> : <>Confirmar</>}
         </S.PaymentButton> 
     )
 }

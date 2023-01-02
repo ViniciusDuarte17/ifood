@@ -7,6 +7,7 @@ import * as S from "./styled";
 
 export const FormPayment = ({ cart }) => {
     const [formPaymentValue, setFormPaymentValue] = useState('');
+    const [loading, setLoanding] = useState(false)
     const navigate = useNavigate();
 
     const handleChange = (event) => {
@@ -21,6 +22,7 @@ export const FormPayment = ({ cart }) => {
     const shippingForm = cart[0]?.shipping.toFixed(2).toString().replace('.', ',');
 
     const paymentInformation = () => { 
+        setLoanding(true)
         const body = {
             products:[ ],
             paymentMethod:formPaymentValue
@@ -28,7 +30,7 @@ export const FormPayment = ({ cart }) => {
         cart.forEach( (prod) => {
             body.products.push( {id: prod.id, quantity: prod.amout} )
         })
-        registerPayment(cart[0]?.restaurantId,body, navigate)
+        registerPayment(cart[0]?.restaurantId,body, navigate, setLoanding)
     }
 
     return (
@@ -56,6 +58,7 @@ export const FormPayment = ({ cart }) => {
                         color={'#000'}
                     /> :
                         <ButtonPayment
+                            loading={loading}
                             variant="contained"
                             background={'#e8222e'}
                             color={'#000'}

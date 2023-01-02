@@ -6,16 +6,18 @@ import { goToFeed } from "../router/coordinator"
 
 
 
-export const registerPayment = (restaurantId, body, navigate) => {
+export const registerPayment = (restaurantId, body, navigate, setLoanding) => {
     (window.localStorage.getItem('token') && !headers.headers.auth) && setHeader()
     axios
     .post(`${BASE_URL}/restaurants/${restaurantId}/order`, body, headers)
     .then( (res) => {
         alert("Pedido confirmado com sucesso!")
+        setLoanding(false)
         goToFeed(navigate)
         window.location.reload(false)
     })
     .catch((error) => {
         alert(error.response.data.message)
+        setLoanding(false)
     })
 }
