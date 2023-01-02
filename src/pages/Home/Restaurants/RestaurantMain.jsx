@@ -5,7 +5,7 @@ import * as Styled from "./styled";
 
 export const RestaurantMain = ({ restaurantDetail }) => {
     const { name, logoUrl, shipping, deliveryTime, address } = restaurantDetail && restaurantDetail;
-
+    // console.log("é um obj ou um vetor?", restaurantDetail.length === 0 ? `carregar`: restaurantDetail )
     return (
         <>
             <Styled.RestaurantMain>

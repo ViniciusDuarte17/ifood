@@ -9,6 +9,7 @@ import { RestaurantMain } from "./RestaurantMain";
 import { RestaurantDetail } from "../../../components/RestaurantDetail";
 import { getRestaurantDetail } from "../../../services/getRestaurantDetail";
 import { GlobalStateContext } from "../../../Global/GlobalStateContext";
+import { Loading } from "../../../components/Loading";
 
 export const RestaurantPage = () => {
   useProtectedPage();
@@ -21,7 +22,7 @@ export const RestaurantPage = () => {
     getRestaurantDetail(params.id, setRestaurantDetail)
   }, [])
 
-  const {id, shipping, deliveryTime, address } = restaurantDetail && restaurantDetail;
+  const { id, shipping, deliveryTime, address } = restaurantDetail && restaurantDetail;
 
   const addItemToCart = (newItem, amout) => {
     const item = { ...newItem, amout, deliveryTime, shipping, address, restaurantId: id }
@@ -39,7 +40,10 @@ export const RestaurantPage = () => {
         </Styled.ButtonIcon>
       </Headers>
       <Styled.ContentMain>
-        <RestaurantMain restaurantDetail={restaurantDetail} />
+        {
+          restaurantDetail.length === 0 ? <Loading size={50}/> :
+            <RestaurantMain restaurantDetail={restaurantDetail} />
+        }
         {
           restaurantDetail.products &&
           restaurantDetail.products.map((restaurant) => {
