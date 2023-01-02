@@ -19,6 +19,10 @@ export const InputContainer = styled.div`
 
 export const FormInputClient = styled.form`
     margin-bottom: 40%;
+    span{
+        color: black;
+        font-size: larger;
+    }
 `
 
 export const PositionLogo = styled.div`

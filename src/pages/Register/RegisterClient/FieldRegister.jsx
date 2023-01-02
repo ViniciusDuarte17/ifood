@@ -1,4 +1,4 @@
-import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
+import { Button, CircularProgress, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { LogoFood } from "../../../components/LogoFood";
 import * as Styled from "./styled";
@@ -16,6 +16,7 @@ export const FieldRegister = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [toshowPassword, setToShowPassword] = useState(false);
   const [confirmPassword, setConfimPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const { form, onChange, clean } = useForm({
     name: '',
@@ -25,8 +26,9 @@ export const FieldRegister = () => {
   })
 
   const onSubmitForm = (event) => {
+    setIsLoading(true)
     event.preventDefault();
-    registerClient(form, clean, navigate);
+    registerClient(form, clean, navigate, setIsLoading);
   };
 
   return (
@@ -132,7 +134,7 @@ export const FieldRegister = () => {
             margin={"normal"}
             type={"submit"}
           >
-            Criar
+            {isLoading ? <CircularProgress color={"inherit"} size={28} /> : <span>Criar</span> }
           </Button>
 
         </Styled.FormInputClient>
