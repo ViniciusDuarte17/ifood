@@ -1,14 +1,15 @@
-import { Button, TextField } from "@mui/material";
+import { Button, CircularProgress, TextField } from "@mui/material";
 import React from "react";
 import * as Styled from "./styled";
 import { useForm } from "../../../hooks/useForm";
 import { registerAddres } from "../../../services/registerAddres";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 
 export const FieldAddres = () => {
-
   const navigate = useNavigate()
+  const [isLoading, setIsLoading] = useState(false)
   const { form, onChange, clean } = useForm({
     street: '',
     number: '',
@@ -19,8 +20,9 @@ export const FieldAddres = () => {
   });
 
   const onSubmitForm = (event) => {
+    setIsLoading(true)
     event.preventDefault();
-    registerAddres(form, clean, navigate)
+    registerAddres(form, clean, navigate, setIsLoading)
   };
 
   return (
@@ -101,7 +103,7 @@ export const FieldAddres = () => {
             margin={"normal"}
             type={"submit"}
           >
-            salvar
+            {isLoading ? <CircularProgress color={"success"} size={28} /> : <span>salvar</span>}
           </Button>
 
         </Styled.FormInput>

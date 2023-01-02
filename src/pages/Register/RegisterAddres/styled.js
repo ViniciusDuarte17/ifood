@@ -20,6 +20,10 @@ export const InputAddresContainer = styled.div`
 
 export const FormInput = styled.form`
     margin-bottom: 18%;
+    span{ 
+        color: black;
+        font-size: larger;
+    }
 `
 
 export const ButtonIcon = styled(Button)`
