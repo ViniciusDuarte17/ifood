@@ -13,55 +13,55 @@ export const GlobalState = (props) => {
 
   const getRestaurant = () => {
     axios
-    .get(`${BASE_URL}/restaurants`, headers)
-    .then((res) => {
-      setRestaurants(res.data.restaurants)
-    })
-    .catch(err => console.log(err))
+      .get(`${BASE_URL}/restaurants`, headers)
+      .then((res) => {
+        setRestaurants(res.data.restaurants)
+      })
+      .catch(err => console.log(err))
   }
 
-   const getAddress = () => {
+  const getAddress = () => {
     axios
-    .get(`${BASE_URL}/profile/address`, headers)
-    .then( (res) => {
-      setRestaurantAddres(res.data.address)
-    })
-    .catch( (error) => {
-      console.log(error)
-    })
+      .get(`${BASE_URL}/profile/address`, headers)
+      .then((res) => {
+        setRestaurantAddres(res.data.address)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
   const getOrdersActive = () => {
     axios
-    .get(`${BASE_URL}/active-order`, headers)
-    .then((res) => {
-      setIsOrder(res.data.order)
-    })
-    .catch(err => console.log(err))
+      .get(`${BASE_URL}/active-order`, headers)
+      .then((res) => {
+        setIsOrder(res.data.order)
+      })
+      .catch(err => console.log(err))
   }
 
-  useEffect( () => {
+  useEffect(() => {
     getAddress()
   }, [])
 
-  useEffect( () => {
+  useEffect(() => {
     getRestaurant()
   }, [])
-  useEffect( () => {
+  useEffect(() => {
     getOrdersActive()
   }, [])
 
-const data = {
-   restaurants,
-   cart,
-   setCart,
-   restaurantAddress,
-   setRestaurantAddres,
-   isOrder,
-   setRestaurants
-}
-    return (
-        <GlobalStateContext.Provider value={data} >
-        {props.children}
-      </GlobalStateContext.Provider>
-    )
+  const data = {
+    restaurants,
+    cart,
+    setCart,
+    restaurantAddress,
+    setRestaurantAddres,
+    isOrder,
+    setRestaurants
+  }
+  return (
+    <GlobalStateContext.Provider value={data} >
+      {props.children}
+    </GlobalStateContext.Provider>
+  )
 }
