@@ -1,14 +1,12 @@
 <h1 id= "top" align="center"><img src="https://user-images.githubusercontent.com/92999708/210407906-e3bd1426-2135-412b-b75f-4ac8e71b39d6.png" />
 
-
 </h1>
 
 <p align="center">
   <a href="#sobre">Sobre</a> &#xa0;|&#xa0; 
   <a href="#orientar">Orientações</a> &#xa0;|&#xa0; 
   <a href="#funciona">O que funciona</a> &#xa0;|&#xa0;
-  <a href="#pendente">Em desenvolvimento</a> &#xa0;|&#xa0;
-  <a href="#imagens">Imagens do Site</a>  &#xa0;|&#xa0;
+  <a href="#imagens">Demostração do site</a>  &#xa0;|&#xa0;
   <a href="#desenvolvedor">Desenvolvedor</a> 
 </p>
 
@@ -17,7 +15,7 @@
 <p align="center">🖊️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site para dispositivos mobile inspirado no ifood. O projeto simula uma plataforma de entrega de refeições e alimentos online. </p>
 
 <h2 id="link">:link: Link Surge - link para visualização do site</h2>
- <a href="http://second-stretch.surge.sh/">Ifuture</a>
+ <a href="http://dark-punishment.surge.sh/">Ifuture</a>
  
  <h2 id="orientar">🚨 Orientações para acesso</h2>
  
@@ -87,6 +85,20 @@ Ferramentas usadas na construção do projeto:
 * Ao editar as informações, caso insira alguma informação incorreta ou deixe de inserir alguma informação obrigatória, o usuário recebe uma mensagem de erro clara;
 * O usuário deve ser capaz de visualizar o seu histórico de pedidos concluídos.
 
-<h2 id ="imagens"> 📱 Imagens do site </h2>
-<a href="https://drive.google.com/file/d/1Zdb2KuOSYQHtqxiMsUPDjtcDyeliJKP2/view?usp=sharing">Clique aqui para vizualizar as imagens</a>
+<h2 id ="imagens"> 📱 Demostração do site</h2>
 
+  <h3 align="center">👀 Prévia</h3>
+
+  <p align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/92999708/210429550-aed17019-9e61-472d-a7ea-318a8ec9da83.gif"/>
+  </p>
+  <h2 id="desenvolvedor">👷🏻‍♂ Desenvolvedor</h2>
+<table> 
+<tr>
+  <td align="center"><a href="https://github.com/ViniciusDuarte17"><img style="border-radius: 50%" src="https://user-images.githubusercontent.com/92999708/210431021-9923435c-eefe-4757-b8e2-e441910a4e88.png" width="100px" alt=""/>
+ <br />
+ <sub><b>Vinicius Duarte</b></sub></a> <a href="https://github.com/ViniciusDuarte17">👩🏻‍💻</a></td>
+ </tr>
+</table>
+
+<a href="#top">Voltar para o topo 🔝</a>
