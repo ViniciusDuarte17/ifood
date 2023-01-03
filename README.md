@@ -1,6 +1,5 @@
 <h1 id= "top" align="center"><img src="https://user-images.githubusercontent.com/92999708/210407906-e3bd1426-2135-412b-b75f-4ac8e71b39d6.png" />
 
-
 </h1>
 
 <p align="center">
@@ -16,7 +15,7 @@
 <p align="center">🖊️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site para dispositivos mobile inspirado no ifood. O projeto simula uma plataforma de entrega de refeições e alimentos online. </p>
 
 <h2 id="link">:link: Link Surge - link para visualização do site</h2>
- <a href="http://second-stretch.surge.sh/">Ifuture</a>
+ <a href="http://dark-punishment.surge.sh/">Ifuture</a>
  
  <h2 id="orientar">🚨 Orientações para acesso</h2>
  
