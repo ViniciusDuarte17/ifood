@@ -102,3 +102,4 @@ Ferramentas usadas na construção do projeto:
  </tr>
 </table>
 
+<a href="#top">Voltar para o topo 🔝</a>
