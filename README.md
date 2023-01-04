@@ -87,11 +87,14 @@ Ferramentas usadas na construção do projeto:
 
 <h2 id ="imagens"> 📱 Demostração do site</h2>
 
+
   <h3 align="center">👀 Prévia</h3>
 
   <p align="center">
   <img width="300" src="https://user-images.githubusercontent.com/92999708/210623179-049281c0-990e-4ed6-a600-29789fbb8fd3.gif"/>
   </p>
+
+  
   <h2 id="desenvolvedor">👷🏻‍♂ Desenvolvedor</h2>
 <table> 
 <tr>
