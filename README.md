@@ -14,8 +14,8 @@
 
 <p align="center">🖊️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site para dispositivos mobile inspirado no ifood. O projeto simula uma plataforma de entrega de refeições e alimentos online. </p>
 
-<h2 id="link">:link: Link Surge - link para visualização do site</h2>
- <a href="https://ripe-brass.surge.sh/">Ifuture</a>
+<h1 id="link">:link: Link Surge - link para visualização do site</h1>
+<h1> <a href="https://ifood-gold.vercel.app">Ifuture</a></h1>
  
  <h2 id="orientar">🚨 Orientações para acesso</h2>
  
