@@ -6,7 +6,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useForm } from "../../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
-import { registerClient } from "../../../services/RegisterCliente";
+import { registerClient } from "../../../services/registerCliente";
 import { MaskCpf } from "../../../components/MaskCpf";
 
 
@@ -26,8 +26,8 @@ export const FieldRegister = () => {
   })
 
   const onSubmitForm = (event) => {
-    setIsLoading(true)
     event.preventDefault();
+    setIsLoading(true)
     registerClient(form, clean, navigate, setIsLoading);
   };
 
