@@ -12,7 +12,7 @@
 
 <h2 id="sobre">🍔 Projeto Final do Frontend: Ifuture </h2>
 
-<p align="center">🖊️ ste projeto foi desenvolvido como parte do bootcamp ministrado pela Labenu e tem como objetivo criar um site para dispositivos móveis, inspirado na plataforma de entrega de refeições online iFood. Construído com React JS, o projeto simula uma plataforma de entrega de alimentos online, oferecendo aos usuários a possibilidade de navegar por diferentes categorias de alimentos, fazer pedidos e acompanhar o status de seus pedidos em tempo real. </p>
+<p align="center">🖊️ Este projeto foi desenvolvido como parte do bootcamp ministrado pela Labenu e tem como objetivo criar um site para dispositivos móveis, inspirado na plataforma de entrega de refeições online iFood. Construído com React JS, o projeto simula uma plataforma de entrega de alimentos online, oferecendo aos usuários a possibilidade de navegar por diferentes categorias de alimentos, fazer pedidos e acompanhar o status de seus pedidos em tempo real. </p>
 
 <h1 id="link">:link: Link Surge - link para visualização do site</h1>
 <h1> <a href="https://ifood-gold.vercel.app">Ifuture</a></h1>
